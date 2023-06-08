@@ -108,10 +108,10 @@ loginBtn.addEventListener("click", function (event) {
     accessToken =
       "eyJraWQiOiJ0Nm1POUJTR2pWVStiNXA2b3B6bHhsbVVaQkc0YnhGTkJreHNnNERDZGtNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI3NWU4MTFjMy1mMTFiLTQxZTYtYjA2YS03MDZiYTE5YTlkNTAiLCJldmVudF9pZCI6ImI4ZmRiZDdkLTBmMzEtNGQ2NS04MWExLWFmZTlhYzVhMTRkMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2ODYxOTg4MDYsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2kyTjlLWW1KZiIsImV4cCI6MTY4NjI4NTIwNiwiaWF0IjoxNjg2MTk4ODA2LCJqdGkiOiI3NDE4YjJkNi1jMDJlLTQyMmUtYmY4OC02OThkYWU1NDNmOTEiLCJjbGllbnRfaWQiOiI3ZWI0cm03ZmIxN21ha3J0ajBqMmtiZ3R1YiIsInVzZXJuYW1lIjoiYWtoaWwifQ.dx2L9pTx2axwxABd9BwilxnE1OzvsBuuNpe91_T458824_je6wE2GfO9fVuHODvpe_M5bF6vpGSogcN_8rO73aFzw47Z_fqjCzp59SpgUG5Y3KGvEyLTSAMRmLkqmjn9JBITic0X9a_LNQaJ_ydI9CGAPnfnOfOMZV7s6WXuXXVP3lvFln1waJQvJ9Zpv06rX8Cqjy-xxFslYtJ3Yr_awtbTQkeArdrNpeGgL1fQLropVTUm2v-bC-FEKFO8sWKyLaumI4GXKDLZvOhaPOLmWvQ4VqZvZAWSJcjSQ_hfY8w5T_33MziPswgCPjryFPLy0Xn5Akg-IgO5Ca6hNDugdQ";
 
-  // serverConnection = new WebSocket(
-  //   `wss://1keph39fl9.execute-api.us-east-1.amazonaws.com/dev?user=${accessToken}`
-  // );
-  serverConnection = new WebSocket("wss://" + window.location.hostname);
+  serverConnection = new WebSocket(
+    `wss://1keph39fl9.execute-api.us-east-1.amazonaws.com/dev?user=${accessToken}`
+  );
+//   serverConnection = new WebSocket("wss://" + window.location.hostname);
 
   serverConnection.onmessage = gotMessageFromServer;
   usernameShow.innerHTML = "Hello, " + name;
