@@ -108,10 +108,10 @@ loginBtn.addEventListener("click", function (event) {
     accessToken =
       "eyJraWQiOiJ0Nm1POUJTR2pWVStiNXA2b3B6bHhsbVVaQkc0YnhGTkJreHNnNERDZGtNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI3NWU4MTFjMy1mMTFiLTQxZTYtYjA2YS03MDZiYTE5YTlkNTAiLCJldmVudF9pZCI6Ijk4MWRkNDIwLTExM2UtNGQzZS1hZDg1LThkZjllMWMxMzQ1ZCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2ODY1NDQ0MDQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2kyTjlLWW1KZiIsImV4cCI6MTY4NjYzMDgwNCwiaWF0IjoxNjg2NTQ0NDA0LCJqdGkiOiJkMTQyMjY1ZC1kOTI0LTQ0NWMtOGM3My0yNTc5NGI0MmM4MjMiLCJjbGllbnRfaWQiOiI3ZWI0cm03ZmIxN21ha3J0ajBqMmtiZ3R1YiIsInVzZXJuYW1lIjoiYWtoaWwifQ.CSm3UdOqKy4WLqJNv4Gnc-r9piih7BT67LQtCHG88dhgKgXtk9IMSLaqf1L1eTTJOzlM9yCjs7ly6Yxb0lAVviyiUhxq1icx3z0621UB_ylh6LOlwlIttiG1WQh54WHCES7nWM5Tf0R8IIVob-wvJe8ADkSnoOAoxpx6UkGguyUr5pW_gHY4Hajb_K4wUnvK1e_GOjr1iaE-1RtsEqik2tkajh5uYzB-RPk2ZsAEfmZOBo6Tw2OSbJcV1CXII9ZT4I6tQVcIaTCJbhZOyBASFHxraa-4mt1K4lWvPfGVVgKgKbzruskDbWgaiE6HVx9VDHr5EMjmWkf1fFjWO4iZwA";
 
-  serverConnection = new WebSocket(
-    `wss://1keph39fl9.execute-api.us-east-1.amazonaws.com/dev?user=${accessToken}`
-  );
-//   serverConnection = new WebSocket("wss://f79e-103-141-55-210.ngrok-free.app");
+//   serverConnection = new WebSocket(
+//     `wss://1keph39fl9.execute-api.us-east-1.amazonaws.com/dev?user=${accessToken}`
+//   );
+  serverConnection = new WebSocket("wss://c15e-103-141-55-210.ngrok-free.app");
 
   serverConnection.onmessage = gotMessageFromServer;
   usernameShow.innerHTML = "Hello, " + name;
